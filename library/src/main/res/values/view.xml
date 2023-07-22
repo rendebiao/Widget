@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="View">
+        <attr name="enabled" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CProgressBar">
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="showBackground" format="boolean" />
+        <attr name="indeterminate" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="PointProgressBar">
+        <attr name="pointStyle">
+            <enum name="circle" value="0" />
+            <enum name="rect" value="1" />
+            <enum name="roundRect" value="2" />
+            <enum name="obliqueRect" value="3" />
+            <enum name="obliqueRoundRect" value="4" />
+            <enum name="square" value="5" />
+            <enum name="roundSquare" value="6" />
+            <enum name="obliqueSquare" value="7" />
+            <enum name="obliqueRoundSquare" value="8" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ShapeProgressBar">
+        <attr name="shapeSize">
+            <enum name="wrap" value="0" />
+            <enum name="small" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="large" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RingProgressBar">
+        <attr name="ringWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="PolygonProgressBar">
+        <attr name="sideCount" format="integer" />
+        <attr name="startDegree" format="float" />
+        <attr name="sideWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CompoundView">
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="Switch">
+        <attr name="thumbStyle">
+            <enum name="circle" value="0" />
+            <enum name="roundRect" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ArrowView">
+        <attr name="arrowDirection">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="arrowColor" format="color" />
+        <attr name="arrowDisableColor" format="color" />
+        <attr name="arrowStroke" format="dimension" />
+    </declare-styleable>
+</resources>

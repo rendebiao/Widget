@@ -1,18 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbStyle="roundRect" />
+
+            <com.rdb.widget.Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:enabled="false"
+                app:thumbStyle="roundRect" />
+
+            <com.rdb.widget.Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:thumbStyle="circle" />
+
+            <com.rdb.widget.Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:enabled="false"
+                app:thumbStyle="circle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.rdb.widget.CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:enabled="false" />
+
+            <com.rdb.widget.RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <com.rdb.widget.RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <com.rdb.widget.RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <com.rdb.widget.RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:enabled="false" />
+        </LinearLayout>
+
+        <com.rdb.widget.SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical" />
+
+        <com.rdb.widget.RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <com.rdb.widget.HorizontalProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:indeterminate="false"
+            app:progress="50" />
+
+        <com.rdb.widget.HorizontalProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:indeterminate="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:pointStyle="circle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:pointStyle="rect" />
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:pointStyle="roundRect" />
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:pointStyle="obliqueRect" />
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:pointStyle="obliqueRoundRect" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:pointStyle="square" />
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:pointStyle="roundSquare" />
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:pointStyle="obliqueSquare" />
+
+            <com.rdb.widget.PointProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:pointStyle="obliqueRoundSquare" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.RingProgressBar
+                android:id="@+id/progressBar11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:progress="50"
+                app:shapeSize="small" />
+
+            <com.rdb.widget.RingProgressBar
+                android:id="@+id/progressBar12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:progress="50"
+                app:shapeSize="middle" />
+
+            <com.rdb.widget.RingProgressBar
+                android:id="@+id/progressBar13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:progress="50"
+                app:shapeSize="large" />
+
+            <com.rdb.widget.RingProgressBar
+                android:id="@+id/progressBar14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:progress="50"
+                app:shapeSize="wrap" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.RingProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indeterminate="true"
+                app:shapeSize="small" />
+
+            <com.rdb.widget.RingProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:indeterminate="true"
+                app:shapeSize="middle" />
+
+            <com.rdb.widget.RingProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:indeterminate="true"
+                app:shapeSize="large" />
+
+            <com.rdb.widget.RingProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:indeterminate="true"
+                app:shapeSize="wrap" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.PolygonProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indeterminate="true"
+                app:shapeSize="small"
+                app:sideCount="3"
+                app:startDegree="30" />
+
+            <com.rdb.widget.PolygonProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:indeterminate="true"
+                app:shapeSize="middle"
+                app:sideCount="4"
+                app:startDegree="0" />
+
+            <com.rdb.widget.PolygonProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:indeterminate="true"
+                app:shapeSize="large"
+                app:sideCount="5"
+                app:startDegree="0" />
+
+            <com.rdb.widget.PolygonProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:indeterminate="true"
+                app:shapeSize="wrap"
+                app:sideCount="6"
+                app:startDegree="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.PolygonProgressBar
+                android:id="@+id/progressBar41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:progress="50"
+                app:shapeSize="small"
+                app:sideCount="3"
+                app:startDegree="30" />
+
+            <com.rdb.widget.PolygonProgressBar
+                android:id="@+id/progressBar42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:progress="50"
+                app:shapeSize="middle"
+                app:sideCount="4"
+                app:startDegree="0" />
+
+            <com.rdb.widget.PolygonProgressBar
+                android:id="@+id/progressBar43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:progress="50"
+                app:shapeSize="large"
+                app:sideCount="5"
+                app:startDegree="0" />
+
+            <com.rdb.widget.PolygonProgressBar
+                android:id="@+id/progressBar44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:progress="50"
+                app:shapeSize="wrap"
+                app:sideCount="6"
+                app:startDegree="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="left" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="top" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="right" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="bottom" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="32dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="top"
+                app:arrowStroke="3dp" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="32dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="bottom"
+                app:arrowStroke="2dp" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="20dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="left"
+                app:arrowStroke="3dp" />
+
+            <com.rdb.widget.ArrowView
+                android:layout_width="20dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="20dp"
+                app:arrowColor="?attr/colorAccent"
+                app:arrowDirection="right"
+                app:arrowStroke="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
