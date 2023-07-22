@@ -1,10 +1,19 @@
-package com.rdb.widget;
+package com.rdb.widget.demo;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.rdb.widget.DragBar;
+import com.rdb.widget.HorizontalProgressBar;
+import com.rdb.widget.PolygonProgressBar;
+import com.rdb.widget.demo.R;
+import com.rdb.widget.RadioButton;
+import com.rdb.widget.RatingBar;
+import com.rdb.widget.RingProgressBar;
+import com.rdb.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
 
