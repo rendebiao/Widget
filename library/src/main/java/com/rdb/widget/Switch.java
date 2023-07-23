@@ -67,6 +67,11 @@ public class Switch extends CompoundView {
     }
 
     @Override
+    protected void onThemeChanged() {
+        trackColor = getColorAccent();
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
         if (isEnabled()) {
             paint.setColor(Color.argb((int) alphaValue.curValue, Color.red(trackColor), Color.green(trackColor), Color.blue(trackColor)));

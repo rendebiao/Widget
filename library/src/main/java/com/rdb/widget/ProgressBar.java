@@ -152,6 +152,13 @@ public abstract class ProgressBar extends View implements ValueAnimator.Animator
     }
 
     @Override
+    protected void onThemeChanged() {
+        foregroundColor = getColorAccent();
+        backgroundColor = Color.argb(80, Color.red(foregroundColor), Color.green(foregroundColor), Color.blue(foregroundColor));
+        postInvalidate();
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
 
     }

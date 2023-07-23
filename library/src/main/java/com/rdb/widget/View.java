@@ -10,6 +10,11 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public abstract class View extends android.view.View {
 
     protected float density;
@@ -17,8 +22,10 @@ public abstract class View extends android.view.View {
     protected boolean isAttached;
     private float touchX;
     private float touchY;
+    private static List<WeakReference<View>> themeChangedListeners = new ArrayList<>();
     private RectF rectF = new RectF();
     private OnDrawListener drawListener;
+    private boolean followTheme;
 
     public View(Context context) {
         this(context, null);
@@ -35,6 +42,10 @@ public abstract class View extends android.view.View {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.View,
                     defStyleAttr, 0);
             setEnabled(typedArray.getBoolean(R.styleable.View_enabled, isEnabled()));
+            followTheme = typedArray.getBoolean(R.styleable.View_followTheme, true);
+            if (followTheme) {
+                themeChangedListeners.add(new WeakReference<View>(this));
+            }
             typedArray.recycle();
         }
     }
@@ -59,6 +70,18 @@ public abstract class View extends android.view.View {
         draw(canvas, rectF);
         if (drawListener != null) {
             drawListener.onDraw(this, canvas, rectF);
+        }
+    }
+
+    public static void notifyThemeChanged() {
+        Iterator<WeakReference<View>> iterator = themeChangedListeners.iterator();
+        while (iterator.hasNext()) {
+            View view = iterator.next().get();
+            if (view != null) {
+                view.onThemeChanged();
+            } else {
+                iterator.remove();
+            }
         }
     }
 
@@ -143,7 +166,13 @@ public abstract class View extends android.view.View {
         this.drawListener = drawListener;
     }
 
+    protected abstract void onThemeChanged();
+
     public interface OnDrawListener {
         void onDraw(View view, Canvas canvas, RectF rectF);
+    }
+
+    public interface OnThemeChangedListener {
+        void onThemeChnaged();
     }
 }

@@ -89,6 +89,13 @@ public class ArrowView extends View {
     }
 
     @Override
+    protected void onThemeChanged() {
+        arrowColor = getColorAccent();
+        arrowDisableColor = Color.argb(128, Color.red(arrowColor), Color.green(arrowColor), Color.blue(arrowColor));
+        postInvalidate();
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
         paint.setColor(isEnabled() ? arrowColor : arrowDisableColor);
         path.reset();

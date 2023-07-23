@@ -20,6 +20,11 @@ public class EmptyView extends View {
     }
 
     @Override
+    protected void onThemeChanged() {
+
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
 
     }

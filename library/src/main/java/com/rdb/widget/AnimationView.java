@@ -50,6 +50,11 @@ public class AnimationView extends View implements ValueAnimator.AnimatorUpdateL
     }
 
     @Override
+    protected void onThemeChanged() {
+
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
         for (DrawItem item : drawItems) {
             if (item.startPosition < position) {

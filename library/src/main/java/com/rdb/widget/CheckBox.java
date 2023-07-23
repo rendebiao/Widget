@@ -42,6 +42,12 @@ public class CheckBox extends CompoundView {
     }
 
     @Override
+    protected void onThemeChanged() {
+        checkColor = getColorAccent();
+        postInvalidate();
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
         if (isEnabled()) {
             paint.setColor(Color.argb(checked ? 255 : 128, Color.red(checkColor), Color.green(checkColor), Color.blue(checkColor)));

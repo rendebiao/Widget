@@ -40,6 +40,12 @@ public class RadioButton extends CompoundView {
     }
 
     @Override
+    protected void onThemeChanged() {
+        radioColor = getColorAccent();
+        postInvalidate();
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
         if (isEnabled()) {
             paint.setColor(Color.argb(checked ? 255 : 128, Color.red(radioColor), Color.green(radioColor), Color.blue(radioColor)));

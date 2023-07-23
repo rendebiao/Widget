@@ -55,7 +55,7 @@ public class Indicator extends View {
         space = typedArray.getDimensionPixelSize(R.styleable.Indicator_indicatorSpace, (int) (density * 8));
         radius = typedArray.getDimensionPixelSize(R.styleable.Indicator_indicatorRadius, (int) (density * 4));
         horizontal = typedArray.getBoolean(R.styleable.Indicator_indicatorHorizontal, true);
-        selectColor = typedArray.getColor(R.styleable.Indicator_indicatorSelectedColor, 0);
+        selectColor = typedArray.getColor(R.styleable.Indicator_indicatorSelectedColor, getColorAccent());
         unselectColor = typedArray.getColor(R.styleable.Indicator_indicatorUnselectedColor, Color.WHITE);
         paint = new Paint();
         paint.setAntiAlias(true);
@@ -75,6 +75,12 @@ public class Indicator extends View {
             count = indicatorAdapter.getCount();
             requestLayout();
         }
+    }
+
+    @Override
+    protected void onThemeChanged() {
+        selectColor = getColorAccent();
+        postInvalidate();
     }
 
     @Override

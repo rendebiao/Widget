@@ -48,6 +48,12 @@ public class SeekBar extends DragBar {
     }
 
     @Override
+    protected void onThemeChanged() {
+        thumbColor = getColorAccent();
+        super.onThemeChanged();
+    }
+
+    @Override
     protected void draw(Canvas canvas, RectF rectF) {
         super.draw(canvas, rectF);
         paint.setStrokeWidth(progressHeight);

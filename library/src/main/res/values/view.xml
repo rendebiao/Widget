@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="View">
         <attr name="enabled" format="boolean" />
+        <attr name="followTheme" format="boolean" />
     </declare-styleable>
     <declare-styleable name="ProgressBar">
         <attr name="max" format="integer" />
