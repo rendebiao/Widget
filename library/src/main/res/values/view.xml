@@ -3,7 +3,7 @@
     <declare-styleable name="View">
         <attr name="enabled" format="boolean" />
     </declare-styleable>
-    <declare-styleable name="CProgressBar">
+    <declare-styleable name="ProgressBar">
         <attr name="max" format="integer" />
         <attr name="progress" format="integer" />
         <attr name="showBackground" format="boolean" />
@@ -57,5 +57,60 @@
         <attr name="arrowColor" format="color" />
         <attr name="arrowDisableColor" format="color" />
         <attr name="arrowStroke" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="Ratio">
+        <attr name="ratioX" format="float" />
+        <attr name="ratioY" format="float" />
+    </declare-styleable>
+    <declare-styleable name="GridView">
+        <attr name="gridDivider" format="color|reference" />
+        <attr name="gridNumColumns" format="integer" />
+        <attr name="gridDividerSize" format="dimension" />
+        <attr name="gridDividerMode">
+            <flag name="all" value="1" />
+            <flag name="vertical" value="2" />
+            <flag name="horizontal" value="4" />
+            <flag name="left" value="8" />
+            <flag name="top" value="16" />
+            <flag name="right" value="32" />
+            <flag name="bottom" value="64" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="Indicator">
+        <attr name="indicatorAlign">
+            <enum name="start" value="0" />
+            <enum name="center" value="1" />
+            <enum name="end" value="2" />
+        </attr>
+        <attr name="indicatorSelectedColor" format="color|reference" />
+        <attr name="indicatorUnselectedColor" format="color|reference" />
+        <attr name="indicatorHorizontal" format="boolean" />
+        <attr name="indicatorRadius" format="dimension" />
+        <attr name="indicatorSpace" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="Tab">
+        <attr name="tabIconSize" format="dimension" />
+        <attr name="tabTitleSize" format="dimension" />
+        <attr name="tabIconMargin" format="dimension" />
+        <attr name="tabPaddingVertical" format="dimension" />
+        <attr name="tabPaddingHorizontal" format="dimension" />
+        <attr name="tabIndicatorSize" format="dimension" />
+        <attr name="tabIndicatorBackground" format="color|reference" />
+        <attr name="tabTitleSelectedColor" format="color|reference" />
+        <attr name="tabTitleUnselectedColor" format="color|reference" />
+        <attr name="tabHorizontal" format="boolean" />
+        <attr name="tabWrapContent" format="boolean" />
+        <attr name="tabShowIndicator" format="boolean" />
+        <attr name="tabIndicatorAlign">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+        <attr name="tabIconAlign">
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
     </declare-styleable>
 </resources>

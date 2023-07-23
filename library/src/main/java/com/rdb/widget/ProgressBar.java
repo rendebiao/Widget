@@ -40,14 +40,14 @@ public abstract class ProgressBar extends View implements ValueAnimator.Animator
         foregroundColor = getColorAccent();
         backgroundColor = Color.argb(80, Color.red(foregroundColor), Color.green(foregroundColor), Color.blue(foregroundColor));
         if (attrs != null) {
-            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CProgressBar,
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ProgressBar,
                     defStyleAttr, 0);
-            indeterminate = typedArray.getBoolean(R.styleable.CProgressBar_indeterminate, false);
-            if (typedArray.hasValue(R.styleable.CProgressBar_showBackground)) {
-                showBackground = typedArray.getBoolean(R.styleable.CProgressBar_showBackground, false);
+            indeterminate = typedArray.getBoolean(R.styleable.ProgressBar_indeterminate, false);
+            if (typedArray.hasValue(R.styleable.ProgressBar_showBackground)) {
+                showBackground = typedArray.getBoolean(R.styleable.ProgressBar_showBackground, false);
             }
-            max = typedArray.getInt(R.styleable.CProgressBar_max, 100);
-            int progress = typedArray.getInt(R.styleable.CProgressBar_progress, 0);
+            max = typedArray.getInt(R.styleable.ProgressBar_max, 100);
+            int progress = typedArray.getInt(R.styleable.ProgressBar_progress, 0);
             setProgress(progress, false, false);
             typedArray.recycle();
         }
