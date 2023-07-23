@@ -1,9 +1,12 @@
-package com.rdb.widget.adapter;
+package com.rdb.widget.list;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.rdb.widget.Adapter;
+import com.rdb.widget.adapter.LayoutProvider;
 
 import java.util.List;
 
@@ -11,7 +14,7 @@ import java.util.List;
  * Created by DB on 2017/6/5.
  */
 
-public abstract class GridAdapter<T> extends ViewAdapter {
+public abstract class GridAdapter<T> extends Adapter {
 
     private int layoutId;
     private List<T> list;

@@ -1,12 +1,14 @@
-package com.rdb.widget.adapter;
+package com.rdb.widget;
 
 import android.database.DataSetObserver;
+
+import com.rdb.widget.list.Adaptable;
 
 /**
  * Created by DB on 2017/1/17.
  */
 
-public abstract class AdapterProxy<T extends ViewAdapter> implements Adaptable<T> {
+public abstract class AdapterProxy<T extends Adapter> implements Adaptable<T> {
 
     private T adapter;
     private DataSetObserver dataSetObserver = new DataSetObserver() {

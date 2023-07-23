@@ -1,4 +1,4 @@
-package com.rdb.widget.adapter;
+package com.rdb.widget.list;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -17,6 +17,9 @@ import androidx.annotation.AttrRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.GestureDetectorCompat;
+
+import com.rdb.widget.AdapterProxy;
+import com.rdb.widget.animator.FloatValue;
 
 import java.util.ArrayList;
 import java.util.HashMap;

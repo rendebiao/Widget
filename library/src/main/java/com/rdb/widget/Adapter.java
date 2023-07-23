@@ -1,4 +1,4 @@
-package com.rdb.widget.adapter;
+package com.rdb.widget;
 
 import android.database.DataSetObserver;
 
@@ -8,7 +8,7 @@ import java.util.HashSet;
  * Created by DB on 2017/1/16.
  */
 
-public abstract class ViewAdapter {
+public abstract class Adapter {
 
     private HashSet<DataSetObserver> mObservers = new HashSet<>();
 

@@ -1,4 +1,4 @@
-package com.rdb.widget.adapter;
+package com.rdb.widget.list;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.LinearLayout;
 
+import com.rdb.widget.AdapterProxy;
 import com.rdb.widget.R;
 
 import java.util.ArrayList;

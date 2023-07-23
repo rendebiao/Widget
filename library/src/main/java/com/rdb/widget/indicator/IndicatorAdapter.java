@@ -1,8 +1,8 @@
 package com.rdb.widget.indicator;
 
-import com.rdb.widget.adapter.ViewAdapter;
+import com.rdb.widget.Adapter;
 
-public abstract class IndicatorAdapter extends ViewAdapter {
+public abstract class IndicatorAdapter extends Adapter {
 
     public abstract int getCount();
 

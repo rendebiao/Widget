@@ -1,4 +1,4 @@
-package com.rdb.widget.adapter;
+package com.rdb.widget.animator;
 
 /**
  * Created by DB on 2016/12/21.
